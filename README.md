@@ -7,6 +7,8 @@ Landing page with Halloween theme using React.
 ### Similar Webpages:
 
 * https://planethorror.es/
+* https://www.horrorweb.com/
+* https://www.horrorbox.es/
 
 ## Authors 🤡
 
