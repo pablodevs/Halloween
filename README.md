@@ -1,16 +1,19 @@
 # 🕷️ Halloween Theme Landing Page ⚰️
 
-🧛 Landing page with Halloween theme using React. ☠️
+Landing page with Halloween theme using React.
 
-# 🎃 #ACodingHalloween Challenge! 💀
-https://planethorror.es/
+## 🎃 #ACodingHalloween Challenge! 💀
+
+### Similar Webpages:
+
+* https://planethorror.es/
 
 ## Authors 🤡
 
 * **Pablo Álamo** - *Coding* - [peibol888](https://github.com/peibol888)
 * **Javier Manteca** - *Coding* - [chavisam](https://github.com/chavisam)
 
-## Languages 🛠️
+## Languages ☠️
 
 * [HTML](https://es.wikipedia.org/wiki/HTML5) - Text editor
 * [CSS](https://developer.mozilla.org/es/docs/Web/CSS) - Styles
@@ -37,4 +40,4 @@ $ npm run start
 ```
 
 ---
-Handcrafted with 🖤 by [peibol888](https://github.com/peibol888) & [chavisam](https://github.com/chavisam) 😊
+Handcrafted with 🖤 by [peibol888](https://github.com/peibol888) & [chavisam](https://github.com/chavisam) 🧛
