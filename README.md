@@ -2,7 +2,7 @@
 
 Landing page with Halloween theme using React.
 
-## 🎃 #ACodingHalloween Challenge! 💀
+## 🎃 [#ACodingHalloween](https://www.eventbrite.com/e/a-coding-halloween-challenge-tickets-191279822097) Challenge! 💀
 
 ### Similar Webpages:
 
@@ -19,6 +19,8 @@ Landing page with Halloween theme using React.
 * [CSS](https://developer.mozilla.org/es/docs/Web/CSS) - Styles
 * [SCSS](https://sass-lang.com/) - Styles
 * [Bootstrap](https://getbootstrap.com/) - Styles
+* [Javasript](https://developer.mozilla.org/es/docs/Web/JavaScript) - Logic
+* [React](https://es.reactjs.org/) - Logic
 
 ## License 👻
 
