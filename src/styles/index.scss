@@ -1,7 +1,65 @@
 @import "~bootstrap/scss/bootstrap.scss";
+@import url('https://fonts.googleapis.com/css2?family=Eater&family=Nosifer&display=swap'); // fonts
 
+// Halloween color palette
+
+$clr-lightgreen: #97c03d;
+$clr-darkgreen: #037144;
+$clr-darkpurple: #432364;
+$clr-lightpurple:#c97eff;
+$clr-gray: #5f5b56;
+$clr-orange: #ffb400;
+
+// Necessary styles
 *, ::after, ::before {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
+
+body {
+    background-color: rgb(7,8,10);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: $clr-lightpurple;
+
+    &:hover {
+        color: #b44aff;
+    }
+}
+header {
+    // Navbar
+    background-color: rgba(0, 0, 0, 0.65);  
+}
+
+main {
+    height: 1500px;
+    
+    // page background styles
+    background-image: url("../img/background.jpg");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: contain;   
+}
+main h1 {
+    font-family: 'Nosifer', cursive;
+    color: $clr-lightgreen;
+}
+main h2 {
+    font-family: 'Eater', cursive;
+    color: $clr-darkgreen;
+}
+main h3 {
+    font-family: 'Courier New', Courier, monospace;
+    color: $clr-darkpurple;
+    font-weight: bold;
+}
+main hr, main hr:not([size]) {
+    margin-block: 5rem;
+    height: 2px;
+    color: white;
+}
+
