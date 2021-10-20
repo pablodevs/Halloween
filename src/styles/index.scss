@@ -3,5 +3,18 @@
 body{
     background-image: url(../img/moon.jpg);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size:cover;
+    overflow-x: hidden;
+    background-attachment: fixed;
+}
+
+.box{
+    height: 100px;
+    background-color: black;
+}
+
+
+
+.header{
+    max-width: 500px;
 }
