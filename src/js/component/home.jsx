@@ -16,7 +16,7 @@ const Home = () => {
 				<hr />{" "}
 				{/* IMPORTANTE: incluir siempre la etiqueta <hr> para separar contenido */}
 				<div>
-					<h2>Yo también soy un titulo</h2>
+					<h2>Yo también soy un título</h2>
 				</div>
 				<hr />
 				<div>
