@@ -13,7 +13,7 @@ if(process.env.GITPOD_WORKSPACE_URL){
 
 module.exports = {
   entry: [
-    './src/js/index.js'
+    './src/js/index.js', './src/js/spiderApp.js'
   ],
   output: {
     filename: 'bundle.js',

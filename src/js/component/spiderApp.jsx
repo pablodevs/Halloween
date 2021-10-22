@@ -139,7 +139,6 @@ export const SpiderApp = () => {
 					</div>
 				</div>
 			</div>
-			<script type="text/javascript" src="./spiderApp.js"></script>
 		</div>
 	);
 };

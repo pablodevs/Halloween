@@ -1,11 +1,11 @@
 import React from "react";
-import { SpiderApp } from "./spiderGame/spiderApp.jsx";
+import { SpiderApp } from "./spiderApp.jsx";
 
 //create your first component
 const Home = () => {
 	return (
 		<div className="global-wrapper container d-flex justify-content-center align-items-center">
-			<div className="example">
+			<div id="spiderAppContainer">
 				<SpiderApp />
 			</div>
 		</div>

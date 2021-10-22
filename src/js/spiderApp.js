@@ -1,6 +1,5 @@
-/* eslint-disable */
-import "bootstrap";
-import "../../../styles/spiderStyles.css";
+import "../styles/spiderStyles.css";
+import { Modal } from "bootstrap";
 
 // ---------- Functions declaration ---------- //
 
@@ -30,12 +29,12 @@ const clearWindow = withPower => {
 		setTimeout(() => {
 			while (myContainer.firstChild) {
 				incrementPoints();
-				container.removeChild(container.firstChild);
+				myContainer.removeChild(myContainer.firstChild);
 			}
 		}, delay);
 	} else {
 		while (myContainer.firstChild) {
-			container.removeChild(container.firstChild);
+			myContainer.removeChild(myContainer.firstChild);
 		}
 	}
 };
@@ -154,13 +153,10 @@ const startGame = event => {
 	points = 0;
 
 	// Render pause modal
-	myPauseModal = new bootstrap.Modal(
-		document.querySelector("#spiderAppPauseModal"),
-		{
-			backdrop: "static",
-			keyboard: false
-		}
-	);
+	myPauseModal = new Modal(document.querySelector("#spiderAppPauseModal"), {
+		backdrop: "static",
+		keyboard: false
+	});
 
 	// Esc key and change window event
 	window.addEventListener("keydown", isEscKey);
@@ -265,18 +261,12 @@ for (let j = 0; j < 10; j++)
 
 // ---------- Modals configuration ---------- //
 
-const myModal = new bootstrap.Modal(
-	document.querySelector("#spiderAppModal1"),
-	{
-		backdrop: "static",
-		keyboard: false
-	}
-);
-const myModal2 = new bootstrap.Modal(
-	document.querySelector("#spiderAppModal2"),
-	{
-		backdrop: "static",
-		keyboard: false
-	}
-);
+const myModal = new Modal(document.querySelector("#spiderAppModal1"), {
+	backdrop: "static",
+	keyboard: false
+});
+const myModal2 = new Modal(document.querySelector("#spiderAppModal2"), {
+	backdrop: "static",
+	keyboard: false
+});
 myModal.toggle();
