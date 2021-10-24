@@ -1,5 +1,4 @@
-import "../styles/spiderStyles.css";
-import { Modal } from "bootstrap";
+import "../styles/spiderStyles.scss";
 
 // ---------- Functions declaration ---------- //
 
@@ -74,6 +73,11 @@ const deadFunction = () => {
 	alienId = 0;
 	incrementPoints();
 
+	window.removeEventListener("keydown", isEscKey);
+	window.removeEventListener("blur", pauseAll);
+
+	showModals();
+
 	// Reset powers
 	let myPowerContainer = document.querySelector(".powers-container");
 	myPowerContainer.childNodes.forEach(child => {
@@ -89,9 +93,10 @@ const deadFunction = () => {
 	clearInterval(interval);
 
 	// Ask for playing again
-	document.querySelector("#spiderAppModal1Label").innerHTML =
-		"Pathetic... Wanna try again?";
-	myModal.toggle();
+	document.querySelector(".difficulty-label").innerHTML =
+		"You died... Wanna try again?";
+
+	difficultyModal.classList.remove("modal-hidden");
 };
 
 // Aliens die when animation ends: "remove alienDiv"
@@ -120,14 +125,12 @@ const killAlien = element => {
 	incrementPoints();
 };
 
-const setDifficulty = event => {
-	document.querySelector("#start").value = event.target.value;
-};
-
 const pauseAll = () => {
 	// FUNCTION CALLED WHEN THE PLAYER FOCUS ON OTHER WINDOW OR PRESS 'Esc' KEY
 	window.removeEventListener("keydown", isEscKey);
 	window.removeEventListener("blur", pauseAll);
+
+	showModals();
 
 	// Stop all aliens (animation: "paused")
 	let children = myContainer.childNodes;
@@ -137,7 +140,7 @@ const pauseAll = () => {
 	});
 
 	// Toggle resume modal
-	myPauseModal.toggle();
+	myPauseModal.classList.remove("modal-hidden");
 };
 
 const isEscKey = e => {
@@ -146,27 +149,40 @@ const isEscKey = e => {
 	}
 };
 
+const setDifficulty = event => {
+	document.querySelector("#start").value = event.target.value;
+
+	difficultyModal.classList.add("modal-hidden");
+	startModal.classList.remove("modal-hidden");
+
+	document.querySelector("#start").addEventListener("click", startGame);
+};
+
 const startGame = event => {
 	// FUNCTION CALLED WHEN THE PLAYER CLICKES THE START BUTTON
 	powerCount = 0;
 	lifes = 10;
 	points = 0;
 
-	// Render pause modal
-	myPauseModal = new Modal(document.querySelector("#spiderAppPauseModal"), {
-		backdrop: "static",
-		keyboard: false
-	});
+	showTheGame();
+	document
+		.querySelector("#resumeButton")
+		.addEventListener("click", resumeGame);
+
+	startModal.classList.add("modal-hidden");
+
+	difficulty = event.target.value;
+	interval = window.setInterval(renderAlien, difficulty);
 
 	// Esc key and change window event
 	window.addEventListener("keydown", isEscKey);
 	window.addEventListener("blur", pauseAll);
-
-	difficulty = event.target.value;
-	interval = window.setInterval(renderAlien, difficulty);
 };
 
 const resumeGame = () => {
+	myPauseModal.classList.add("modal-hidden");
+
+	showTheGame();
 	window.addEventListener("keydown", isEscKey);
 	window.addEventListener("blur", pauseAll);
 
@@ -178,6 +194,13 @@ const resumeGame = () => {
 	interval = window.setInterval(renderAlien, difficulty);
 };
 
+const showTheGame = () => {
+	document.querySelector(".modal-wrapper").style.zIndex = "-1";
+};
+
+const showModals = () => {
+	document.querySelector(".modal-wrapper").style.zIndex = "1";
+};
 // ---------- Render aliens function ---------- //
 
 const renderAlien = (isNeon = null) => {
@@ -237,36 +260,18 @@ let typesOfAliens = [
 	points,
 	myContainer = document.querySelector("#spidersContainer"),
 	interval,
-	difficulty,
-	myPauseModal;
+	difficulty;
 
-// ---------- Global Events ---------- //
+// ---------- Difficulty Events ---------- //
 
 document
 	.querySelectorAll(".difficulty")
 	.forEach(e => e.addEventListener("click", setDifficulty));
-document.querySelector("#start").addEventListener("click", startGame);
-document.querySelector("#resumeButton").addEventListener("click", resumeGame);
-
-// ---------- Add Powers and lifes ---------- //
-
-for (let i = 0; i < 10; i++)
-	document.querySelector(
-		".powers-container"
-	).innerHTML += `<button id="power${i}" class="fab fa-superpowers power"></button>`;
-for (let j = 0; j < 10; j++)
-	document.querySelector(
-		".lifes-container"
-	).innerHTML += `<i class="fas fa-heart red-heart"></i>`;
 
 // ---------- Modals configuration ---------- //
 
-const myModal = new Modal(document.querySelector("#spiderAppModal1"), {
-	backdrop: "static",
-	keyboard: false
-});
-const myModal2 = new Modal(document.querySelector("#spiderAppModal2"), {
-	backdrop: "static",
-	keyboard: false
-});
-myModal.toggle();
+const difficultyModal = document.querySelector("#spiderAppModal1");
+difficultyModal.classList.remove("modal-hidden");
+
+const startModal = document.querySelector("#spiderAppModal2");
+const myPauseModal = document.querySelector("#spiderAppPauseModal");

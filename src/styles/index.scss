@@ -1,5 +1,5 @@
 @import "~bootstrap/scss/bootstrap.scss";
-@import url('https://fonts.googleapis.com/css2?family=Eater&family=Nosifer&display=swap'); // fonts
+@import url('https://fonts.googleapis.com/css2?family=Yeon+Sung&display=swap'); // fonts
 
 // Halloween color palette
 
@@ -18,8 +18,8 @@ $clr-orange: #ffb400;
 }
 
 body {
-    background-color: rgb(7,8,10);
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: white; // rgb(7,8,10); ////////////////////////////////
+    font-family: 'Yeon Sung', cursive;
 }
 
 a {

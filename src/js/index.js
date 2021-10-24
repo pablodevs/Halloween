@@ -9,7 +9,7 @@ import "bootstrap";
 import "../styles/index.scss";
 
 //include the spiderApp into the bundle
-import "../styles/spiderStyles.css";
+import "../styles/spiderStyles.scss";
 import "./component/spiderApp.jsx";
 
 //import your own components
