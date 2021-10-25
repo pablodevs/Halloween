@@ -261,7 +261,7 @@ const spider = (ID, alienState, condition) => {
 
 let typesOfAliens = [
 		["#97c03d", "5s linear"],
-		["#c97eff", "4s ease"],
+		["#c97eff", "5s ease"],
 		["#ffb400", "4s ease-out"],
 		["#6C001C", "6s ease-in-out"],
 		["#432364", "6s ease-in"],
