@@ -1,4 +1,5 @@
 import React from "react";
+import { SmokyText } from "./smokyText.jsx";
 import { SpiderApp } from "./spiderApp.jsx";
 
 const Home = () => {
@@ -9,6 +10,7 @@ const Home = () => {
 				style={{ height: "70px" }}>
 				I will be the navbar
 			</header>
+			<SmokyText /> {/* Smoke effect */}
 			<main className="container-xxl pt-5 border border-light border-top-0 border-bottom-0">
 				<div>
 					<h1>Hola, soy un Título</h1>
