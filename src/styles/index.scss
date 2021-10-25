@@ -18,7 +18,7 @@ $clr-orange: #ffb400;
 }
 
 body {
-    background-color: white; // rgb(7,8,10); ////////////////////////////////
+    background-color: rgb(7,8,10);
     font-family: 'Yeon Sung', cursive;
 }
 
@@ -45,15 +45,12 @@ main {
     background-size: cover;   
 }
 main h1 {
-    font-family: 'Nosifer', cursive;
     color: $clr-lightgreen;
 }
 main h2 {
-    font-family: 'Eater', cursive;
     color: $clr-darkgreen;
 }
 main h3 {
-    font-family: 'Courier New', Courier, monospace;
     color: $clr-darkpurple;
     font-weight: bold;
 }
@@ -68,5 +65,4 @@ main hr, main hr:not([size]) {
 #spiderAppContainer {
     height: 700px;
     width: 100%;
-    border: 3px solid white;
 }
