@@ -138,8 +138,27 @@ const Home = () => {
 					</div>
 				</div>
 				<div className="row mt-3">
-					<div className="col-lg-4 col-xs-12 col-sm-4 mx-auto bg-warning board">
+					<div className="col-lg-4 col-xs-12 col-sm-4 mx-auto board">
 						<div className="row">{boxes}</div>
+						<div className="row">
+							<button
+								className="col-3 btn btn-dark mt-2 text-danger mx-auto"
+								onClick={() => {
+									setArr([
+										null,
+										null,
+										null,
+										null,
+										null,
+										null,
+										null,
+										null,
+										null
+									]);
+								}}>
+								PLAY AGAIN!
+							</button>
+						</div>
 					</div>
 				</div>
 			</div>
