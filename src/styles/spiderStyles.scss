@@ -13,7 +13,8 @@
   padding: 0;
   background-image: url("../img/abandonado_light.jpg");
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: cover;
+  background-position: 50%;
   overflow: hidden;
   position: relative;
 }
@@ -23,6 +24,10 @@
 }
 
 /* Modal clases */
+#instructions {
+  font-size: 25px;
+  width: 70%;
+}
 .modal-wrapper {
   color: $clr-darkpurple;
   position: absolute;
@@ -40,23 +45,22 @@
 .spiderAppModal {
   position: absolute;
   background-color: black;
-  width: 60%;
+  width: fit-content;
   height: fit-content;
   padding: 1rem;
 }
 
 #spiderAppModal1 {
   z-index: 1;
+  width: 70%;
 }
 #spiderAppModal2 {
-  z-index: 2;
+  z-index: 1;
+  width: 50%;
 }
 #spiderAppPauseModal {
-  z-index: 3;
+  z-index: 1;
 }
-
-
-/* / Modal styles */
 
 .spiderApp-samp {
   /* Press Esc message */
@@ -66,14 +70,27 @@
   top: 4%;
   left: 3%;
 }
-#start {
-  float: right;
+button.game-btn {
+  color: $clr-darkpurple;
   font-size: 30px;
   font-weight: bold;
+  border: 1px solid $clr-darkpurple;
+
+  &:active, &:focus, &:hover {
+    box-shadow: none;
+    background-color: $clr-darkpurple;
+  }
 }
-button.difficulty, #start {
-  color: $clr-blood;
+button.btn:hover {
+  color: black;
+}
+button.difficulty {
+  color: $clr-darkpurple;
   width: 100%;
+}
+button.difficulty {
+  font-size: 20px;
+  font-weight: bold;
 }
 div.row,
 div.row > * {
@@ -81,7 +98,11 @@ div.row > * {
 }
 
 /* LIFES & POWERS styles */
+svg {
+  pointer-events: none;
+}
 .spiderAppFooter {
+  position: absolute;
   left: 0;
   bottom: 0;
   width: 100%;
@@ -92,8 +113,10 @@ div.row > * {
 }
 .powers-container {
   height: 100%;
+  width: fit-content;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   background-color: $clr-darkgreen;
 }
 div button.power {
@@ -101,17 +124,19 @@ div button.power {
   cursor: auto;
   color: black;
   background: none;
+  display: flex;
 }
 div button.power-active {
   cursor: pointer;
-  color: #fff;
-  text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #0fa,
-    0 0 82px #0fa, 0 0 92px #0fa, 0 0 105px #0fa, 0 0 121px #0fa;
+  color: rgb(173, 1, 1);
+  & > * {
+    filter: drop-shadow(0px 0px 10px black);
+  }
 }
 
 .lifes-container {
   height: 100%;
-  background-color: rgb(90, 250, 90);
+  background-color: $clr-lightgreen;
   display: flex;
   align-items: center;
 }
@@ -199,7 +224,7 @@ div button.power-active {
     rgba(128, 186, 232, 0) 99%,
     rgba(125, 185, 232, 0) 100%
   ); /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#007db9e8',GradientType=1 ); /* IE6-9 */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0white', endColorstr='#007db9e8',GradientType=1 ); /* IE6-9 */
 }
 
 .alienDiv {
@@ -209,14 +234,17 @@ div button.power-active {
   cursor: pointer;
 }
 .alien {
-  font-size: 70px;
+  font-size: 60px;
 }
-.neonClass {
+.neon {
   animation: flicker 1.5s infinite;
+}
+#spidersContainer div svg {
+  filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 5));
 }
 
 /* RESPONSIVE STYLES */
-@media screen and (min-width: 718px) {
+@media screen and (min-width: 768px) {
   div.lifes-container,
   div.powers-container {
     font-size: 25px;
@@ -225,20 +253,7 @@ div button.power-active {
     padding: 0 10px 0 10px;
   }
 }
-@media screen and (min-width: 500px) and (max-width: 717px) {
-  div.lifes-container,
-  div.powers-container {
-    width: fit-content;
-    padding: 0;
-    font-size: 15px;
-  }
-}
-@media screen and (max-width: 717px) {
-  .life {
-    margin: 0 5px 0 5px;
-  }
-}
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 767px) {
   .spiderAppFooter {
     height: fit-content;
     flex-direction: column;
@@ -276,12 +291,13 @@ div button.power-active {
   0%,
   50%,
   100% {
-    text-shadow: 0 0 4px #fff, 0 0 11px #fff, 0 0 19px #fff, 0 0 40px #0fa,
-      0 0 70px #0fa;
+    filter: drop-shadow(0px 3px 3px rgba(255, 59, 59));
+    color: rgb(44, 0, 0)
   }
   25%,
   75% {
-    text-shadow: none;
+    filter: none;
+    color: rgb(255, 0, 0)
   }
 }
 

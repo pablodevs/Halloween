@@ -42,7 +42,7 @@ main {
     background-image: url("../img/background.jpg");
     background-repeat: no-repeat;
     background-position: top;
-    background-size: contain;   
+    background-size: cover;   
 }
 main h1 {
     font-family: 'Nosifer', cursive;
@@ -65,12 +65,8 @@ main hr, main hr:not([size]) {
 
 // SpiderGame
 
-.global-wrapper {
+#spiderAppContainer {
     height: 700px;
-}
-
-div#spiderAppContainer {
-    height: 500px;
-    width: 1000px;
+    width: 100%;
     border: 3px solid white;
 }

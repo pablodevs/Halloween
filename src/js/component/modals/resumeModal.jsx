@@ -7,7 +7,7 @@ export const ResumeModal = () => {
 				<h3>Continue when you feel confident...</h3>
 			</div>
 			<div className="d-flex justify-content-center mx-md-5 px-lg-5">
-				<button id="resumeButton" className="btn btn-outline-dark">
+				<button id="resumeButton" className="btn game-btn">
 					Resume
 				</button>
 			</div>

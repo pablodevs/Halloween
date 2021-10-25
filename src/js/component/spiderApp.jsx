@@ -1,8 +1,9 @@
 import React from "react";
+import { GameInstructions } from "./modals/gameInstructions.jsx";
 import { DiffModal } from "./modals/difficultyModal.jsx";
 import { ResumeModal } from "./modals/resumeModal.jsx";
 import { StartModal } from "./modals/startModal.jsx";
-import spiderWebImg from "../../img/icons/spider_web_icon.png";
+import { FaHeart, FaSpider } from "react-icons/fa";
 
 //create your first component
 export const SpiderApp = () => {
@@ -10,13 +11,12 @@ export const SpiderApp = () => {
 	let lifes = [];
 	for (let i = 0; i < 10; i++) {
 		powers.push(
-			<button id={"power" + i} className="power">
-				<img src={spiderWebImg} />
+			<button className="power">
+				<FaSpider id={"power" + i} />
 			</button>
 		);
 	}
-	for (let j = 0; j < 10; j++)
-		lifes.push(<i className="fas fa-heart red-heart"></i>);
+	for (let j = 0; j < 10; j++) lifes.push(<FaHeart className="red-heart" />);
 
 	return (
 		<div className="spiderApp-wrapper">
@@ -34,6 +34,7 @@ export const SpiderApp = () => {
 				<div className="lifes-container">{lifes}</div>
 			</div>
 			<div className="modal-wrapper">
+				<GameInstructions />
 				<DiffModal />
 				<StartModal />
 				<ResumeModal />

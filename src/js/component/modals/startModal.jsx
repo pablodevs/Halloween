@@ -7,10 +7,7 @@ export const StartModal = () => {
 				<h3>Do you fear death?</h3>
 			</div>
 			<div className="d-flex justify-content-center mx-md-5 px-lg-5">
-				<button
-					id="start"
-					value="1500"
-					className="btn btn-outline-dark">
+				<button id="start" value="1500" className="btn game-btn">
 					Start!
 				</button>
 			</div>
