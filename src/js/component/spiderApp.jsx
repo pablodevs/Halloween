@@ -1,8 +1,8 @@
 import React from "react";
-import { GameInstructions } from "./modals/gameInstructions.jsx";
-import { DiffModal } from "./modals/difficultyModal.jsx";
-import { ResumeModal } from "./modals/resumeModal.jsx";
-import { StartModal } from "./modals/startModal.jsx";
+import { GameInstructions } from "./spiderAppModals/gameInstructions.jsx";
+import { DiffModal } from "./spiderAppModals/difficultyModal.jsx";
+import { ResumeModal } from "./spiderAppModals/resumeModal.jsx";
+import { StartModal } from "./spiderAppModals/startModal.jsx";
 import { FaHeart, FaSpider } from "react-icons/fa";
 
 //create your first component
