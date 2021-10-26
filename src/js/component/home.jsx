@@ -28,6 +28,7 @@ const Home = () => {
 			<footer className="sticky-bottom text-light p-5 text-center border border-light border-start-0 border-end-0">
 				Copyright &copy;{" "}
 				<a
+					className="hashtag"
 					target="_blank"
 					rel="noreferrer"
 					href="https://www.eventbrite.com/e/a-coding-halloween-challenge-tickets-191279822097">

@@ -1,38 +1,6 @@
 @import "~bootstrap/scss/bootstrap.scss";
 @import url('https://fonts.googleapis.com/css2?family=Griffy&family=Yeon+Sung&display=swap');
 
-body{
-    background-image: url(../img/moon.jpg);
-    background-repeat: no-repeat;
-    background-size:cover;
-    overflow-x: hidden;
-    background-attachment: fixed;
-}
-
-.box{
-    height: 100px;
-    background-color: black;
-}
-
-
-
-.header{
-    max-width: 500px;
-}
-
-.carPictures{
-    height: 500px;
-}
-
-a {
-    color:red
-}
-
-.navbar{
-    background-color: black;
-}
-
-th,td{color:yellowgreen}
 //============ Halloween color palette ============//
 
 $clr-lightgreen: #97c03d;
@@ -131,7 +99,7 @@ body {
     font-family: 'Yeon Sung', cursive;
 }
 
-a {
+.hashtag {
     text-decoration: none;
     color: $clr-lightpurple;
 
