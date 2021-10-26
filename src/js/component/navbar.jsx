@@ -2,7 +2,7 @@ import React from "react";
 
 export const Navbar = () => {
 	return (
-		<nav className="navbar navbar-expand-lg navbar-dark">
+		<nav className="navbar navbar-expand-lg navbar-dark sticky-top border border-light">
 			<img src="../../img/halloween.png" alt="" />
 
 			<div className="collapse navbar-collapse gb-" id="navbarText">

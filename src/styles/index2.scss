@@ -1,0 +1,123 @@
+/*===== GOOGLE FONTS =====*/
+@import url('https://fonts.googleapis.com/css2?family=Griffy&family=Yeon+Sung&display=swap');
+
+/*===== SASS VARIABLES =====*/
+
+    $header-height: 3rem;
+    /*========== Color Palette ==========*/
+    $clr-lightgreen: #97c03d;
+    $clr-darkgreen: #037144;
+    $clr-darkpurple: #432364;
+    $clr-lightpurple:#c97eff;
+    $clr-gray: #5f5b56;
+    $clr-orange: #ffb400;
+    
+    /*========== Fonts styles ==========*/
+    $body-font: 'Yeon Sung', cursive;
+    $biggest-font-size: 2.25rem;
+    $h1-font-size: 1.5rem;
+    $h2-font-size: 1.25rem;
+    $h3-font-size: 1rem;
+    $normal-font-size: .938rem;
+    $small-font-size: .813rem;
+    $smallest-font-size: .75rem;
+
+    /*========== Fonts weight ==========*/
+    $medium-bold: 500;
+    $semi-bold: 600;
+
+    /*========== Margins bottom ==========*/
+    $mb-1: .5rem;
+    $mb-2: 1rem;
+    $mb-3: 1.5rem;
+    $mb-4: 2rem;
+    $mb-5: 2.5rem;
+    $mb-6: 3rem;
+
+    /*========== z index ==========*/
+    $z-tooltip: 10;
+    $z-fixed: 100;
+
+@media screen and (min-width: 768px) {
+    $biggest-font-size: 4rem;
+    $h1-font-size: 2.25rem;
+    $h2-font-size: 1.5rem;
+    $h3-font-size: 1.25rem;
+    $normal-font-size: 1rem;
+    $small-font-size: .875rem;
+    $smallest-font-size: .813rem;
+}
+/*===== GENERAL =====*/
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: $header-height 0 0 0;
+    font-family: $body-font;
+    font-size: $normal-font-size;
+    background-color: $clr-lightgreen;
+    color: black;
+    line-height: 1.6;
+}
+
+h1,h2,h3,p,ul {
+    margin: 0;
+}
+
+ul {
+    padding: 0;
+    line-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto
+}
+
+/*===== VARIABLES DARK THEME =====*/
+
+
+/*===== BUTTON DARK/LIGHT =====*/
+
+
+/*===== CLASS CSS =====*/
+.section {
+    padding: 4rem 0 2rem;
+}
+
+.section-title, .section-subtitle {
+    text-align: center
+}
+
+.section-title {
+    font-size: $h1-font-size;
+    color: $clr-darkpurple;
+    margin-bottom: $mb-3;
+}
+
+.section-subtitle {
+    display: block;
+    margin-bottom: $mb-1;
+    font-weight: $medium-bold;
+    color: $clr-darkpurple;
+}
+
+/*===== LAYOUT =====*/
+
+
+/*===== NAV =====*/
+
+
+/*=====  =====*/
+
+
+/*=====  =====*/
