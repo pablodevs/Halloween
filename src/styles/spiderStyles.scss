@@ -1,0 +1,311 @@
+// Halloween color palette
+  $clr-lightgreen: #97c03d;
+  $clr-darkgreen: #037144;
+  $clr-darkpurple: #432364;
+  $clr-lightpurple:#c97eff;
+  $clr-gray: #5f5b56;
+  $clr-orange: #ffb400;
+  $clr-blood: #6C001C;
+
+.spiderApp-wrapper {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-image: url("../img/abandonado_light.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50%;
+  overflow: hidden;
+  position: relative;
+}
+.spiderApp-header {
+  background: $clr-blood;
+  height: 2%;
+}
+
+/* Modal clases */
+#instructions {
+  font-size: 25px;
+  width: 70%;
+}
+.modal-wrapper {
+  color: $clr-darkpurple;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modal-hidden {
+  visibility: hidden;
+}
+.spiderAppModal {
+  position: absolute;
+  background-color: black;
+  width: fit-content;
+  height: fit-content;
+  padding: 1rem;
+}
+
+#spiderAppModal1 {
+  z-index: 1;
+  width: 70%;
+}
+#spiderAppModal2 {
+  z-index: 1;
+  width: 50%;
+}
+#spiderAppPauseModal {
+  z-index: 1;
+}
+
+.spiderApp-samp {
+  /* Press Esc message */
+  color: $clr-lightpurple;
+  font-size: 25px;
+  position: absolute;
+  top: 4%;
+  left: 3%;
+}
+button.game-btn {
+  color: $clr-darkpurple;
+  font-size: 30px;
+  font-weight: bold;
+  border: 1px solid $clr-darkpurple;
+
+  &:active, &:focus, &:hover {
+    box-shadow: none;
+    background-color: $clr-darkpurple;
+  }
+}
+button.btn:hover {
+  color: black;
+}
+button.difficulty {
+  color: $clr-darkpurple;
+  width: 100%;
+}
+button.difficulty {
+  font-size: 20px;
+  font-weight: bold;
+}
+div.row,
+div.row > * {
+  padding: 0;
+}
+
+/* LIFES & POWERS styles */
+svg {
+  pointer-events: none;
+}
+.spiderAppFooter {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.powers-container {
+  height: 100%;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: $clr-darkgreen;
+}
+div button.power {
+  border: none;
+  cursor: auto;
+  color: black;
+  background: none;
+  display: flex;
+}
+div button.power-active {
+  cursor: pointer;
+  color: rgb(173, 1, 1);
+  & > * {
+    filter: drop-shadow(0px 0px 10px black);
+  }
+}
+
+.lifes-container {
+  height: 100%;
+  background-color: $clr-lightgreen;
+  display: flex;
+  align-items: center;
+}
+.red-heart {
+  color: $clr-blood;
+}
+
+/* POINTS counter */
+.points {
+  position: absolute;
+  right: 0%;
+  top: 12px;
+  margin: 7px;
+  padding: 17px;
+  border-radius: 20%;
+  height: fit-content;
+  width: fit-content;
+
+  color: $clr-orange;
+  font-size: 20px;
+  text-align: center;
+}
+#actual-points {
+  font-size: 38px;
+  z-index: 1;
+}
+
+/* ALIEN styles */
+#spidersContainer {
+  position: relative;
+  min-height: 93%;
+  z-index: 0;
+}
+/* Shine effect */
+#spidersContainer.shine-effect:after {
+  content: "";
+  transform: translateX(100%);
+  min-height: 115%;
+  width: 100%;
+  position: absolute;
+  z-index: 1;
+  animation: shine 0.8s;
+
+  background: -moz-linear-gradient(
+    left,
+    rgba(255, 255, 255, 0) 0%,
+    #ad002e 50%,
+    rgba(128, 186, 232, 0) 99%,
+    rgba(125, 185, 232, 0) 100%
+  ); /* FF3.6+ */
+  background: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    color-stop(0%, rgba(255, 255, 255, 0)),
+    color-stop(50%, #ad002e),
+    color-stop(99%, rgba(128, 186, 232, 0)),
+    color-stop(100%, rgba(125, 185, 232, 0))
+  ); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(
+    left,
+    rgba(255, 255, 255, 0) 0%,
+    #ad002e 50%,
+    rgba(128, 186, 232, 0) 99%,
+    rgba(125, 185, 232, 0) 100%
+  ); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(
+    left,
+    rgba(255, 255, 255, 0) 0%,
+    #ad002e 50%,
+    rgba(128, 186, 232, 0) 99%,
+    rgba(125, 185, 232, 0) 100%
+  ); /* Opera 11.10+ */
+  background: -ms-linear-gradient(
+    left,
+    rgba(255, 255, 255, 0) 0%,
+    #ad002e 50%,
+    rgba(128, 186, 232, 0) 99%,
+    rgba(125, 185, 232, 0) 100%
+  ); /* IE10+ */
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 0%,
+    #ad002e 50%,
+    rgba(128, 186, 232, 0) 99%,
+    rgba(125, 185, 232, 0) 100%
+  ); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0white', endColorstr='#007db9e8',GradientType=1 ); /* IE6-9 */
+}
+
+.alienDiv {
+  width: fit-content;
+  position: absolute;
+  top: 115%;
+  cursor: pointer;
+}
+.alien {
+  font-size: 60px;
+}
+.neon {
+  animation: flicker 1.5s infinite;
+}
+#spidersContainer div svg {
+  filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 5));
+}
+
+/* RESPONSIVE STYLES */
+@media screen and (min-width: 768px) {
+  div.lifes-container,
+  div.powers-container {
+    font-size: 25px;
+    width: 359px;
+    justify-content: space-between;
+    padding: 0 10px 0 10px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .spiderAppFooter {
+    height: fit-content;
+    flex-direction: column;
+  }
+  div.lifes-container,
+  div.powers-container {
+    width: 100%;
+    justify-content: space-between;
+    font-size: 25px;
+    padding: 5px;
+  }
+}
+@media screen and (max-width: 360px) {
+  div.lifes-container,
+  div.powers-container {
+    font-size: 15px;
+    padding: 3px;
+  }
+}
+
+/* ANIMATIONS */
+@keyframes fly {
+  100% {
+    top: -10%;
+  }
+}
+@keyframes neon {
+  100% {
+    left: -5%;
+  }
+}
+
+/* Flickering animation */
+@keyframes flicker {
+  0%,
+  50%,
+  100% {
+    filter: drop-shadow(0px 3px 3px rgba(255, 59, 59));
+    color: rgb(44, 0, 0)
+  }
+  25%,
+  75% {
+    filter: none;
+    color: rgb(255, 0, 0)
+  }
+}
+
+@keyframes shine {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}

@@ -13,7 +13,7 @@ if(process.env.GITPOD_WORKSPACE_URL){
 
 module.exports = {
   entry: [
-    './src/js/index.js'
+    './src/js/index.js', './src/js/spiderApp.js'
   ],
   output: {
     filename: 'bundle.js',
@@ -67,7 +67,7 @@ module.exports = {
       Dropdown: "exports-loader?Dropdown!bootstrap/js/dist/dropdown"
     }),
     new HtmlWebpackPlugin({
-        favicon: '4geeks.ico',
+        favicon: 'skull.png',
         template: 'template.html'
     }),
     new PrettierPlugin({
