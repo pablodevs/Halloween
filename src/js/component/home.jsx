@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { Box } from "./box.jsx";
 import swal from "sweetalert";
 import { Navbar } from "./navbar.jsx";
+import { Newsletter } from "./newsletter.jsx";
+import ReactPlayer from "react-player";
 
 //include images into your bundle
 import halloween from "../../img/halloween.png";
@@ -129,19 +131,20 @@ const Home = () => {
 
 	return (
 		<>
-			<Navbar />
-			<Carrousel />
+			{/* <Navbar /> */}
+			<Newsletter />
+			{/* <Carrousel /> */}
 			<div className="container-fluid">
 				<div className="row mt-1">
 					<div className="mx-auto col-sm-12 col-md-6 col-lg-6 col-xl-6 text-center">
-						<img src={halloween} className="header" />
+						{/* <img src={halloween} className="header" /> */}
 					</div>
 				</div>
 				<div className="row mt-3">
 					<div className="col-lg-4 col-xs-12 col-sm-4 mx-auto board">
-						<div className="row">{boxes}</div>
+						{/* <div className="row">{boxes}</div> */}
 						<div className="row">
-							<button
+							{/* <button
 								className="col-3 btn btn-dark mt-2 text-danger mx-auto"
 								onClick={() => {
 									setArr([
@@ -157,7 +160,8 @@ const Home = () => {
 									]);
 								}}>
 								PLAY AGAIN!
-							</button>
+							</button> */}
+							<div></div>
 						</div>
 					</div>
 				</div>
