@@ -2,30 +2,58 @@ import React from "react";
 
 export const Navbar = () => {
 	return (
-		<nav className="navbar navbar-expand-lg navbar-dark sticky-top border border-light">
-			<img src="../../img/halloween.png" alt="" />
-
-			<div className="collapse navbar-collapse gb-" id="navbarText">
-				<ul className="navbar-nav mr-auto">
-					<li className="nav-item active">
-						<a className="nav-link" href="#">
-							Castle <span className="sr-only">(current)</span>
-						</a>
-					</li>
-					<li className="nav-item">
-						<a className="nav-link" href="#">
-							How to escape!
-						</a>
-					</li>
-					<li className="nav-item">
-						<a className="nav-link" href="#">
-							Owners
-						</a>
-					</li>
-				</ul>
-				<span className="navbar-text ml-auto text-right">
-					Welcome to our spookie Night Party!
-				</span>
+		<nav className="navbar navbar-expand-lg" id="nav">
+			<div className="container">
+				<a className="navbar-brand" href="#home">
+					<img
+						className="me-2"
+						src="skull.png"
+						alt="logo"
+						width="30"
+						height="30"
+					/>
+					Halloween
+				</a>
+				<button
+					className="navbar-toggler"
+					type="button"
+					data-bs-toggle="collapse"
+					data-bs-target="#navbarNav"
+					aria-controls="navbarNav"
+					aria-expanded="false"
+					aria-label="Toggle navigation">
+					<i className="fas fa-bars"></i>
+				</button>
+				<div className="collapse navbar-collapse" id="navbarNav">
+					<ul className="navbar-nav">
+						<li className="nav-item">
+							<a className="nav-link" href="#services">
+								Services
+							</a>
+						</li>
+						<li className="nav-item">
+							<a className="nav-link" href="#games">
+								Games
+							</a>
+						</li>
+						<li className="nav-item">
+							<a className="nav-link" href="#contact">
+								Contact
+							</a>
+						</li>
+					</ul>
+					<span className="d-flex align-items-center ms-auto float-end">
+						<button
+							id="theme-button"
+							type="button"
+							className="d-flex align-items-center justify-content-center">
+							<i
+								className="far fa-moon"
+								style={{ fontSize: "1.3rem" }}></i>
+							{/* <i className="fas fa-sun" style={{ fontSize: "1.3rem" }}></i> */}
+						</button>
+					</span>
+				</div>
 			</div>
 		</nav>
 	);

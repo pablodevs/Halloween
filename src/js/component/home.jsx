@@ -1,16 +1,42 @@
 import React from "react";
 import { Navbar } from "./navbar.jsx";
+import { Carrousel } from "./carrousel.jsx";
 import { SmokyText } from "./smokyText.jsx";
-import { SpiderApp } from "./spiderApp.jsx";
+import { Games } from "./games.jsx";
+import { ScrollTop } from "./scrolltop.jsx";
 
 const Home = () => {
 	return (
 		<>
-			<header className="l-header" id="header">
-				<Navbar />
-			</header>
-			<main className="l-main"></main>
-			<footer className="footer section bd-container"></footer>
+			<Navbar />
+			<main className="container">
+				{/* ===== Carousel ===== */}
+				<Carrousel />
+				{/* ===== Services ===== */}
+
+				{/* ===== Games ===== */}
+				<Games />
+				{/* ===== Contact ===== */}
+			</main>
+
+			{/* Smoke effect */}
+			<SmokyText />
+
+			{/* Scroll Top button */}
+			<ScrollTop />
+
+			{/* ===== Footer ===== */}
+			<footer className="sticky-bottom p-5 text-center">
+				Copyright &copy;{" "}
+				<a
+					className="hashtag"
+					target="_blank"
+					rel="noreferrer"
+					href="https://www.eventbrite.com/e/a-coding-halloween-challenge-tickets-191279822097">
+					#ACodingHalloween
+				</a>{" "}
+				Challenge! 2021
+			</footer>
 		</>
 	);
 };

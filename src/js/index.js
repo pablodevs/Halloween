@@ -15,21 +15,21 @@ import "../styles/spiderStyles.scss";
 import Home from "./component/home.jsx";
 
 //hacer desaparecer el WELCOME y aparece la página
-// window.onload = function() {
-// 	const handleSmokeanimation = () => {
-// 		body.style.overflow = "auto";
-// 		document.querySelector("#app").removeChild(smokeTextDiv);
-// 	};
-// 	let body = document.querySelector("body");
-// 	body.style.overflow = "hidden";
+window.onload = function() {
+	const handleSmokeanimation = () => {
+		body.style.overflow = "auto";
+		document.querySelector("#app").removeChild(smokeTextDiv);
+	};
+	let body = document.querySelector("body");
+	body.style.overflow = "hidden";
 
-// 	let smokeTextDiv = document.querySelector("#smoky-wrapper");
-// 	smokeTextDiv.style.animation = "fadeOut 4s 5s";
+	let smokeTextDiv = document.querySelector("#smoky-wrapper");
+	smokeTextDiv.style.animation = "fadeOut 4s 5s";
 
-// 	let lastSpan = smokeTextDiv.lastChild;
-// 	lastSpan.addEventListener("webkitAnimationEnd", handleSmokeanimation);
-// 	lastSpan.addEventListener("animationend", handleSmokeanimation);
-// };
+	let lastSpan = smokeTextDiv.lastChild;
+	lastSpan.addEventListener("webkitAnimationEnd", handleSmokeanimation);
+	lastSpan.addEventListener("animationend", handleSmokeanimation);
+};
 
 //render your react application
 ReactDOM.render(<Home />, document.querySelector("#app"));
