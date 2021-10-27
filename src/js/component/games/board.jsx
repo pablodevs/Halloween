@@ -126,15 +126,15 @@ export const Board = () => {
 		<>
 			<div className="row mb-3 d-flex justify-content-center">
 				<div className="col-auto d-flex align-items-center">
-					<img src={skull} width="35" />
+					<img src={skull} className="tictactoeImg" />
 				</div>
 				<div className="col-auto">
-					<h1 className="gameName" style={{ color: "#ed6c2c" }}>
-						&nbsp;TicTacToe&nbsp;
+					<h1 className="gameName tictactoeTitle">
+						&nbsp;Tic Tac Toe&nbsp;
 					</h1>
 				</div>
 				<div className="col-auto d-flex align-items-center">
-					<img src={pumpkin} width="35" />
+					<img src={pumpkin} className="tictactoeImg" />
 				</div>
 			</div>
 			<div className="container-fluid board">
