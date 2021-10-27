@@ -1,31 +1,260 @@
 @import "~bootstrap/scss/bootstrap.scss";
+/*===== GOOGLE FONTS =====*/
 @import url('https://fonts.googleapis.com/css2?family=Griffy&family=Yeon+Sung&display=swap');
 
-//============ Halloween color palette ============//
+/*===== SASS VARIABLES =====*/
 
-$clr-lightgreen: #97c03d;
-$clr-darkgreen: #037144;
-$clr-darkpurple: #432364;
-$clr-lightpurple:#c97eff;
-$clr-gray: #5f5b56;
-$clr-orange: #ffb400;
+    $header-height: 3rem;
+    /*========== Color Palette ==========*/
+    $clr-lightgreen: #97c03d;
+    $clr-darkgreen: #5A8249;
+    $clr-darkpurple: #432364;
+    $clr-lightpurple:#c97eff;
+    $clr-gray: #2c2a27;
+    $clr-lightgray: #ffffffb6;
+    $clr-orange: #ffb400;
+    
+    /*========== Fonts styles ==========*/
+    $body-font: 'Yeon Sung', cursive;
+    $biggest-font-size: 2.25rem;
+    $h1-font-size: 1.5rem;
+    $h2-font-size: 1.3rem;
+    $h3-font-size: 1.2rem;
+    $normal-font-size: 1.1rem;
+    $small-font-size: .813rem;
+    $smallest-font-size: .75rem;
 
-//============ Necessary styles ============//
+    /*========== Fonts weight ==========*/
+    $medium-bold: 500;
+    $semi-bold: 600;
+
+    /*========== Margins bottom ==========*/
+    $mb-1: .5rem;
+    $mb-2: 1rem;
+    $mb-3: 1.5rem;
+    $mb-4: 2rem;
+    $mb-5: 2.5rem;
+    $mb-6: 3rem;
+
+    /*========== z index ==========*/
+    $z-tooltip: 10;
+    $z-fixed: 100;
+
+@media screen and (min-width: 768px) {
+    $biggest-font-size: 4rem;
+    $h1-font-size: 2.25rem;
+    $h2-font-size: 1.5rem;
+    $h3-font-size: 1.25rem;
+    $normal-font-size: 1rem;
+    $small-font-size: .875rem;
+    $smallest-font-size: .813rem;
+}
+/*===== GENERAL =====*/
 *, ::after, ::before {
     box-sizing: border-box;
+    // border: 1px red;
+    // border-style: solid;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: $body-font;
+    font-size: $normal-font-size;
+    background-color: $clr-darkgreen;
+    color: white;
+    line-height: 1.6;
+}
+
+div.row {
     margin: 0;
+}
+
+h1,h2,h3,p,ul {
+    margin: 0;
+}
+
+a, a.nav-link {
+    text-decoration: none;
+    color: $clr-lightpurple;
+     &:hover, &:focus {
+         color: $clr-darkpurple;
+     }
+}
+
+button.btn, button.navbar-toggler {
+    &, &:active, &:focus {
+        box-shadow: none;
+    }
+}
+
+.container, .container-fluid {
     padding: 0;
 }
 
-//============ Smoky Text ============//
+/*===== SCROLL TOP BUTTON =====*/
+#scroll-top {
+    position: fixed;
+    bottom: 1.2rem;
+    right: 1.2rem;
+    background-color: rgba(255, 255, 255, 0.466);
+    color: inherit;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    width: fit-content;
+    height: fit-content;
+    border-radius: 5px;
 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: 0.3s;
+    & > * {
+        transition: 0.3s;
+    }
+
+    &:hover {
+        background-color: rgba(255, 255, 255, 0.712);
+        & > * {
+            transform: translateY(-3px);
+            color: $clr-gray;
+        }
+    }
+}
+
+/*===== VARIABLES DARK THEME =====*/
+
+
+/*===== BUTTON DARK/LIGHT =====*/
+
+
+/*===== CLASS CSS =====*/
+.section {
+    margin: 4rem 0 2rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+/*===== LAYOUT =====*/
+footer {
+    color: $clr-lightgray;
+}
+
+/*===== NAV =====*/
+.navbar {
+    background-color: rgba(0, 0, 0, 0.5);  
+}
+
+button.navbar-toggler {
+    color: $clr-lightpurple;
+}
+#theme-button, button {
+    background: none;
+    border: none;
+    color: inherit;
+}
+
+/*===== CAROUSEL =====*/
+.carousel {
+    margin: 4rem 0 2rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+/*===== ToDo LIST =====*/
+input:active, input:focus {
+    box-shadow: none;
+}
+.list-col{
+    max-width: 500px;
+}
+.trash{
+    cursor: pointer;
+    color:red;
+    visibility: hidden;
+}
+.done{visibility: hidden;
+cursor: pointer;
+font-size: smaller;
+}
+.list-group-item:hover{
+    .done,.trash{
+    visibility: visible;
+    }
+}
+.counter{
+    font-size:smaller;
+    font-style: italic;
+    -webkit-box-shadow: 0px 7px 3px 1px rgba(209,198,209,1);
+    -moz-box-shadow: 0px 7px 3px 1px rgba(209,198,209,1);
+    box-shadow: 0px 7px 3px 1px rgba(209,198,209,1);
+}
+.lista{
+    visibility: hidden;
+}
+
+/*===== GAMES =====*/
+/*========== Tic Tac Toe ==========*/
+#ticTacToe {
+    background-color: #4f0008;
+}
+h1.tictactoeTitle {
+    color: #ed6c2c;
+    font-size: 4rem;
+}
+img.tictactoeImg {
+    width: 50px;
+}
+@media screen and (max-width: 575px){
+    h1.tictactoeTitle {
+        font-size: 2.8rem;
+    }
+    img.tictactoeImg {
+        width: 30px;
+    }
+}
+img.token {
+    object-fit: contain;
+}
+.box {
+    border: 2px solid #c7ecb99c;
+    border-radius: 10px;
+    cursor: pointer;
+}
+@media screen and (min-width: 992px){
+    .box {
+        height: 152px;
+    }
+    .board {
+        width: 60%;
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 991px){
+    .board {
+        width: 75%;
+    }
+}
+@media screen and (max-width: 991px){
+    .box {
+        height: 140px;
+    }
+    .board {
+        width: 90%;
+    }
+}
+/*========== Spiders ==========*/
+#spidersGame {
+    height: 80vh;
+}
+
+/*===== SMOKY TEXT =====*/
 #smoky-wrapper {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    font-size: 13vh;
+    font-size: 13vw;
     font-family: 'Griffy', cursive;
     color: white;
 
@@ -35,10 +264,7 @@ $clr-orange: #ffb400;
     justify-content: center;
     align-items: center;
 
-    background-image: url("../img/bosque.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-
+    background-color: rgba(0, 0, 0, 0.521);
     overflow: hidden;
     color: transparent;
     backface-visibility: hidden;
@@ -92,54 +318,3 @@ $clr-orange: #ffb400;
     100% {opacity:0;}
 }
 
-//============ General styles ============//
-
-body {
-    background-color: rgb(7,8,10);
-    font-family: 'Yeon Sung', cursive;
-}
-
-.hashtag {
-    text-decoration: none;
-    color: $clr-lightpurple;
-
-    &:hover {
-        color: #b44aff;
-    }
-}
-nav {
-    // Navbar
-    background-color: rgba(0, 0, 0, 0.65);  
-}
-
-main {
-    height: 1500px;
-    
-    // page background styles
-    background-image: url("../img/background.jpg");
-    background-repeat: no-repeat;
-    background-position: top;
-    background-size: cover;   
-}
-main h1 {
-    color: $clr-lightgreen;
-}
-main h2 {
-    color: $clr-darkgreen;
-}
-main h3 {
-    color: $clr-darkpurple;
-    font-weight: bold;
-}
-main hr, main hr:not([size]) {
-    margin-block: 5rem;
-    height: 2px;
-    color: white;
-}
-
-//============ SpiderGame ============//
-
-#spiderAppContainer {
-    height: 600px;
-    width: 100%;
-}

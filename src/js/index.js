@@ -6,7 +6,7 @@ import ReactDOM from "react-dom";
 import "bootstrap";
 
 //include your index.scss file into the bundle
-import "../styles/index2.scss";
+import "../styles/index.scss";
 
 //include the spiderApp into the bundle
 import "../styles/spiderStyles.scss";
