@@ -9,18 +9,6 @@ import { Newsletter } from "./newsletter.jsx";
 import ScrollReveal from "scrollreveal";
 
 const Home = () => {
-	//===== Scroll Reveal Effect =====//
-	const sr = ScrollReveal({
-		origin: "top",
-		distance: "30px",
-		duration: 2000,
-		reset: true
-	});
-
-	sr.reveal(`.spiderApp-wrapper`, {
-		interval: 200
-	});
-
 	return (
 		<>
 			<Navbar />
@@ -29,7 +17,6 @@ const Home = () => {
 				<Carousel />
 
 				{/* ===== Services ===== */}
-				<Input />
 				<Newsletter />
 
 				{/* ===== Games ===== */}

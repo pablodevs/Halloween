@@ -161,6 +161,30 @@ button.navbar-toggler {
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
+.carousel-content-1 {
+    border: 1px solid white;
+    position: absolute;
+    bottom: 10%;
+    left: calc((100% - 400px)/2);
+    width: 400px;
+}
+.carousel-content-2 {
+    border: 1px solid white;
+    position: absolute;
+    top: 4%;
+    left: 10%;
+    width: 45%;
+    height: 350px;
+}
+.carousel-content-3 {
+    border: 1px solid white;
+    position: absolute;
+    top: 4%;
+    left: 10%;
+    width: 45%;
+    height: 250px;
+}
+
 /*===== ToDo LIST =====*/
 input:active, input:focus {
     box-shadow: none;

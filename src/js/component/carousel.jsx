@@ -1,4 +1,6 @@
 import React from "react";
+import { Newsletter } from "./newsletter.jsx";
+import { Input } from "./input.jsx";
 import img1 from "../../img/carousel1.jpg";
 import img2 from "../../img/carousel2.jpg";
 import img3 from "../../img/carousel3.jpg";
@@ -31,26 +33,19 @@ export const Carousel = () => {
 			<div className="carousel-inner">
 				<div className="carousel-item active">
 					<img src={img1} className="d-block w-100" alt="..." />
-					<div className="carousel-caption d-none d-md-block">
-						<h5>First slide label</h5>
-						<p>
-							Some representative placeholder content for the
-							first slide.
-						</p>
+					<div className="carousel-content-1">
+						<h1>TÍTULO DE BIENVENIDA</h1>
 					</div>
 				</div>
 				<div className="carousel-item">
 					<img src={img2} className="d-block w-100" alt="..." />
-					<div className="carousel-caption d-none d-md-block">
-						<h5>Second slide label</h5>
-						<p>
-							Some representative placeholder content for the
-							second slide.
-						</p>
-					</div>
+					<div className="carousel-content-2">{/* <Input /> */}</div>
 				</div>
 				<div className="carousel-item">
 					<img src={img3} className="d-block w-100" alt="..." />
+					<div className="carousel-content-3">
+						{/* <Newsletter /> */}
+					</div>
 					<div className="carousel-caption d-none d-md-block">
 						<h5>Third slide label</h5>
 						<p>
