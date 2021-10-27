@@ -5,7 +5,7 @@ import { SpiderApp } from "./spiderApp.jsx";
 export const Games = () => {
 	return (
 		<>
-			<div className="section" id="spidersGame">
+			<div className="section games" id="spidersGame">
 				<SpiderApp />
 			</div>
 			<div

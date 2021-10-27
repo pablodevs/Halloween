@@ -14,7 +14,7 @@ import "../styles/spiderStyles.scss";
 //import your own components
 import Home from "./component/home.jsx";
 
-//hacer desaparecer el WELCOME y aparece la página
+//===== Hacer desaparecer el WELCOME y aparece la página =====//
 // window.onload = function() {
 // 	const handleSmokeanimation = () => {
 // 		body.style.overflow = "auto";
@@ -32,5 +32,5 @@ import Home from "./component/home.jsx";
 // 	lastSpan.addEventListener("animationend", handleSmokeanimation);
 // };
 
-//render your react application
+//===== render your react application =====//
 ReactDOM.render(<Home />, document.querySelector("#app"));

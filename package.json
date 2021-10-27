@@ -74,6 +74,7 @@
 		"react-dom": "^16.14.0",
 		"react-icons": "^4.3.1",
 		"react-polyfills": "0.0.1",
+		"scrollreveal": "^4.0.9",
 		"sweetalert": "^2.1.2"
 	}
 }
