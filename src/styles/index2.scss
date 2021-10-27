@@ -130,15 +130,8 @@ button.btn, button.navbar-toggler {
 /*===== CLASS CSS =====*/
 .section {
     margin: 4rem 0 2rem;
-    height: 80vh;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
-@media screen and (max-width: 991px){
-    .section {
-        height: 57vh;
-    }
-}
-
 /*===== LAYOUT =====*/
 footer {
     color: $clr-lightgray;
@@ -164,7 +157,8 @@ button.navbar-toggler {
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
-/*===== TIC TAC TOE =====*/
+/*===== GAMES =====*/
+/*========== Tic Tac Toe ==========*/
 #ticTacToe {
     background-color: #4f0008;
 }
@@ -211,6 +205,10 @@ img.token {
     .board {
         width: 90%;
     }
+}
+/*========== Spiders ==========*/
+#spidersGame {
+    height: 80vh;
 }
 
 /*===== SMOKY TEXT =====*/

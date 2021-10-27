@@ -9,7 +9,7 @@ export const Games = () => {
 				<SpiderApp />
 			</div>
 			<div
-				className="section py-2 d-flex flex-column justify-content-center align-items-center"
+				className="section py-4 d-flex flex-column justify-content-center align-items-center"
 				id="ticTacToe">
 				<Board />
 			</div>
