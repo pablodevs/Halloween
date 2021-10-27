@@ -1,8 +1,8 @@
 import React from "react";
 import { Navbar } from "./navbar.jsx";
-import { Carrousel } from "./carrousel.jsx";
+import { Carousel } from "./carousel.jsx";
 import { SmokyText } from "./smokyText.jsx";
-import { Games } from "./games.jsx";
+import { Games } from "./games/games.jsx";
 import { ScrollTop } from "./scrolltop.jsx";
 
 const Home = () => {
@@ -11,16 +11,18 @@ const Home = () => {
 			<Navbar />
 			<main className="container">
 				{/* ===== Carousel ===== */}
-				<Carrousel />
+				<Carousel />
+
 				{/* ===== Services ===== */}
 
 				{/* ===== Games ===== */}
 				<Games />
+
 				{/* ===== Contact ===== */}
 			</main>
 
 			{/* Smoke effect */}
-			<SmokyText />
+			{/* <SmokyText /> */}
 
 			{/* Scroll Top button */}
 			<ScrollTop />

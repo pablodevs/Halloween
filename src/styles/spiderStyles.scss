@@ -1,3 +1,6 @@
+/*===== GOOGLE FONTS =====*/
+@import url('https://fonts.googleapis.com/css2?family=Griffy&family=Yeon+Sung&display=swap');
+
 // Halloween color palette
   $clr-lightgreen: #97c03d;
   $clr-darkgreen: #037144;
@@ -21,6 +24,12 @@
 .spiderApp-header {
   background: $clr-blood;
   height: 2%;
+}
+.gameName {
+  color: $clr-darkpurple;
+  font-family: 'Griffy', cursive;
+  font-weight: bold;
+  font-size: 3rem;
 }
 
 /* Modal clases */
@@ -96,7 +105,25 @@ div.row,
 div.row > * {
   padding: 0;
 }
+.start-container {
+  display: -webkit-box;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
 
+#start {
+  width: 6.4rem;
+  line-height: 6.4rem;
+  border-radius: 50%;
+  text-align: center;
+  margin: 1.6rem;
+  border: none;
+  padding: 0;
+  position: relative;
+  outline: none;
+  color: black;
+}
 /* LIFES & POWERS styles */
 svg {
   pointer-events: none;
@@ -307,5 +334,188 @@ div button.power-active {
   }
   100% {
     transform: translateX(100%);
+  }
+}
+
+/* START BUTTON */
+#start {
+  -webkit-animation: 1s fullRotation ease infinite;
+          animation: 1s fullRotation ease infinite;
+  background: $clr-darkpurple;
+}
+#start:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  border-radius: 50%;
+  background: $clr-darkpurple;
+  -webkit-animation: wutBefore 0.8s .4s ease-out infinite;
+          animation: wutBefore 0.8s .4s ease-out infinite;
+  z-index: -1;
+}
+#start:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  border-radius: 50%;
+  background: $clr-darkpurple;
+  -webkit-animation: wut 0.8s ease-out infinite;
+          animation: wut 0.8s ease-out infinite;
+  z-index: -1;
+}
+
+@-webkit-keyframes fullRotation {
+  0% {
+    -webkit-transform: rotate(-3deg) scale(1) translate3d(0, 0, 0);
+            transform: rotate(-3deg) scale(1) translate3d(0, 0, 0);
+  }
+  20% {
+    -webkit-transform: rotate(50deg) translate3d(0, 5px, 0);
+            transform: rotate(50deg) translate3d(0, 5px, 0);
+  }
+  40% {
+    -webkit-transform: rotate(-15deg) scale(1.1) translate3d(0, 8px, -5px);
+            transform: rotate(-15deg) scale(1.1) translate3d(0, 8px, -5px);
+  }
+  60% {
+    -webkit-transform: rotate(5deg) translate3d(5px, -8px, -80px);
+            transform: rotate(5deg) translate3d(5px, -8px, -80px);
+  }
+  90% {
+    -webkit-transform: rotate(-1deg) translate3d(0, 0, 0);
+            transform: rotate(-1deg) translate3d(0, 0, 0);
+  }
+  100% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+}
+
+@keyframes fullRotation {
+  0% {
+    -webkit-transform: rotate(-3deg) scale(1) translate3d(0, 0, 0);
+            transform: rotate(-3deg) scale(1) translate3d(0, 0, 0);
+  }
+  20% {
+    -webkit-transform: rotate(50deg) translate3d(0, 5px, 0);
+            transform: rotate(50deg) translate3d(0, 5px, 0);
+  }
+  40% {
+    -webkit-transform: rotate(-15deg) scale(1.1) translate3d(0, 8px, -5px);
+            transform: rotate(-15deg) scale(1.1) translate3d(0, 8px, -5px);
+  }
+  60% {
+    -webkit-transform: rotate(5deg) translate3d(5px, -8px, -80px);
+            transform: rotate(5deg) translate3d(5px, -8px, -80px);
+  }
+  90% {
+    -webkit-transform: rotate(-1deg) translate3d(0, 0, 0);
+            transform: rotate(-1deg) translate3d(0, 0, 0);
+  }
+  100% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+}
+@-webkit-keyframes wut {
+  0% {
+    border-radius: 50%;
+    -webkit-transform: skew(0) translate3d(0, 0px, 0px);
+            transform: skew(0) translate3d(0, 0px, 0px);
+  }
+  10% {
+    -webkit-transform: translate3d(0, -10px, 0);
+            transform: translate3d(0, -10px, 0);
+  }
+  50% {
+    border-radius: 50%;
+  }
+  80% {
+    border-radius: 30%;
+    -webkit-transform: translate3d(20, 10px, 20px);
+            transform: translate3d(20, 10px, 20px);
+  }
+  100% {
+    border-radius: 50%;
+    -webkit-transform: skew(0) translate3d(0, 0px, 0px);
+            transform: skew(0) translate3d(0, 0px, 0px);
+  }
+}
+@keyframes wut {
+  0% {
+    border-radius: 50%;
+    -webkit-transform: skew(0) translate3d(0, 0px, 0px);
+            transform: skew(0) translate3d(0, 0px, 0px);
+  }
+  10% {
+    -webkit-transform: translate3d(0, -10px, 0);
+            transform: translate3d(0, -10px, 0);
+  }
+  50% {
+    border-radius: 50%;
+  }
+  80% {
+    border-radius: 30%;
+    -webkit-transform: translate3d(20, 10px, 20px);
+            transform: translate3d(20, 10px, 20px);
+  }
+  100% {
+    border-radius: 50%;
+    -webkit-transform: skew(0) translate3d(0, 0px, 0px);
+            transform: skew(0) translate3d(0, 0px, 0px);
+  }
+}
+@-webkit-keyframes wutBefore {
+  0% {
+    border-radius: 50%;
+    -webkit-transform: translate3d(0, 0px, 0px);
+            transform: translate3d(0, 0px, 0px);
+  }
+  10% {
+    -webkit-transform: translate3d(-10px, 10px, 0);
+            transform: translate3d(-10px, 10px, 0);
+  }
+  70% {
+    border-radius: 50%;
+  }
+  80% {
+    border-radius: 30%;
+    -webkit-transform: translate3d(-20px, -10px, -20px);
+            transform: translate3d(-20px, -10px, -20px);
+  }
+  100% {
+    border-radius: 50%;
+    -webkit-transform: translate3d(0, 0px, 0px);
+            transform: translate3d(0, 0px, 0px);
+  }
+}
+@keyframes wutBefore {
+  0% {
+    border-radius: 50%;
+    -webkit-transform: translate3d(0, 0px, 0px);
+            transform: translate3d(0, 0px, 0px);
+  }
+  10% {
+    -webkit-transform: translate3d(-10px, 10px, 0);
+            transform: translate3d(-10px, 10px, 0);
+  }
+  70% {
+    border-radius: 50%;
+  }
+  80% {
+    border-radius: 30%;
+    -webkit-transform: translate3d(-20px, -10px, -20px);
+            transform: translate3d(-20px, -10px, -20px);
+  }
+  100% {
+    border-radius: 50%;
+    -webkit-transform: translate3d(0, 0px, 0px);
+            transform: translate3d(0, 0px, 0px);
   }
 }

@@ -1,17 +1,15 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { pumpking } from "../../img/pumpkin.jpg";
-import skull from "../../img/skull.png";
 
 export const Box = props => {
 	return (
 		<div
-			className="box"
+			className="h-100 p-3 d-flex align-items-center justify-content-center"
 			onClick={() => {
 				props.changeTurnFunction();
 				props.changeArrFunction(props.i);
 			}}>
-			<img src={props.theArr[props.i]} className="token w-100" />
+			<img src={props.theArr[props.i]} className="token h-100" />
 		</div>
 	);
 };

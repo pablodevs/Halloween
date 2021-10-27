@@ -1,12 +1,20 @@
 import React from "react";
 import { FaHeartBroken, FaSpider } from "react-icons/fa";
 import { BsHandIndexThumb } from "react-icons/bs";
+import { GiHangingSpider } from "react-icons/gi";
 
 export const GameInstructions = () => {
 	return (
 		<div
 			id="instructions"
 			className="spiderAppModal container d-flex-column">
+			<div className="row mb-3 d-flex justify-content-center align-items-center">
+				<div className="col-auto d-inline-flex p-2">
+					<GiHangingSpider style={{ fontSize: "3rem" }} />
+					<h1 className="gameName">SPIDERS</h1>
+					<GiHangingSpider style={{ fontSize: "3rem" }} />
+				</div>
+			</div>
 			<div className="row mb-2 d-flex justify-content-center align-items-center">
 				<div className="col-auto p-2" style={{ color: "#ffb400" }}>
 					<BsHandIndexThumb style={{ marginInlineEnd: "1rem" }} />{" "}

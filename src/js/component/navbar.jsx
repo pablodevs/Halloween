@@ -32,8 +32,13 @@ export const Navbar = () => {
 							</a>
 						</li>
 						<li className="nav-item">
-							<a className="nav-link" href="#games">
-								Games
+							<a className="nav-link" href="#spidersGame">
+								Spiders
+							</a>
+						</li>
+						<li className="nav-item">
+							<a className="nav-link" href="#ticTacToe">
+								TicTacToe
 							</a>
 						</li>
 						<li className="nav-item">
@@ -42,7 +47,7 @@ export const Navbar = () => {
 							</a>
 						</li>
 					</ul>
-					<span className="d-flex align-items-center ms-auto float-end">
+					{/* <span className="d-flex align-items-center ms-auto float-end">
 						<button
 							id="theme-button"
 							type="button"
@@ -50,9 +55,8 @@ export const Navbar = () => {
 							<i
 								className="far fa-moon"
 								style={{ fontSize: "1.3rem" }}></i>
-							{/* <i className="fas fa-sun" style={{ fontSize: "1.3rem" }}></i> */}
 						</button>
-					</span>
+					</span> */}
 				</div>
 			</div>
 		</nav>
