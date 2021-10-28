@@ -26,7 +26,7 @@ const Home = () => {
 			</main>
 
 			{/* Smoke effect */}
-			{/* <SmokyText /> */}
+			<SmokyText />
 
 			{/* Scroll Top button */}
 			<ScrollTop />

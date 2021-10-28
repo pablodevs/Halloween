@@ -16,7 +16,13 @@ export const SpiderApp = () => {
 			</button>
 		);
 	}
-	for (let j = 0; j < 10; j++) lifes.push(<FaHeart className="red-heart" />);
+	for (let j = 0; j < 10; j++)
+		lifes.push(
+			<FaHeart
+				className="red-heart"
+				style={{ marginInline: "0.19rem" }}
+			/>
+		);
 
 	return (
 		<div className="spiderApp-wrapper">

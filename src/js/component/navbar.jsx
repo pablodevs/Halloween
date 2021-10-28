@@ -1,19 +1,18 @@
 import React from "react";
+import ReactAudioPlayer from "react-audio-player";
 
 export const Navbar = () => {
 	return (
 		<nav className="navbar navbar-expand-lg" id="nav">
 			<div className="container">
-				<a className="navbar-brand" href="#home">
-					<img
-						className="me-2"
-						src="skull.png"
-						alt="logo"
-						width="30"
-						height="30"
-					/>
-					Halloween
-				</a>
+				<img
+					className="me-2"
+					src="skull.png"
+					alt="logo"
+					width="30"
+					height="30"
+				/>
+				The Halloween Web Land!
 				<button
 					className="navbar-toggler"
 					type="button"
@@ -27,8 +26,8 @@ export const Navbar = () => {
 				<div className="collapse navbar-collapse" id="navbarNav">
 					<ul className="navbar-nav">
 						<li className="nav-item">
-							<a className="nav-link" href="#services">
-								Services
+							<a className="nav-link" href="#things">
+								Things before Die
 							</a>
 						</li>
 						<li className="nav-item">
@@ -42,21 +41,17 @@ export const Navbar = () => {
 							</a>
 						</li>
 						<li className="nav-item">
-							<a className="nav-link" href="#contact">
-								Contact
-							</a>
+							{/* ===== AUDIO ===== */}
+							<ReactAudioPlayer
+								src="https://halloween.jmanvel.es/terror.ogg"
+								className="color-dark opacity"
+								type="audio/ogg"
+								volume={0.01}
+								autoPlay
+								loop
+							/>
 						</li>
 					</ul>
-					{/* <span className="d-flex align-items-center ms-auto float-end">
-						<button
-							id="theme-button"
-							type="button"
-							className="d-flex align-items-center justify-content-center">
-							<i
-								className="far fa-moon"
-								style={{ fontSize: "1.3rem" }}></i>
-						</button>
-					</span> */}
 				</div>
 			</div>
 		</nav>

@@ -5,7 +5,7 @@ export const Newsletter = () => {
 	const [users, setUsers] = useState([]);
 	const [name, setName] = useState("");
 	const [email, setEmail] = useState("");
-	const uri = `https://gorest.co.in/public/v1/users/1929`;
+	const uri = `https://gorest.co.in/public/v1/users/2349`;
 
 	useEffect(() => {
 		fetch(uri, {
@@ -86,12 +86,12 @@ export const Newsletter = () => {
 							<small
 								id="emailHelp"
 								className="form-text text-muted text-danger">
-								It has to be spoky one!
+								It has to be a spooky one!
 							</small>
 						</div>
 						<div className="form-group text-danger">
 							<label htmlFor="exampleInputEmail1">
-								Invent an scarry Email address
+								Introduce a scary Email address
 							</label>
 							<input
 								type="email"
