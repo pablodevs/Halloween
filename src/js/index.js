@@ -19,8 +19,6 @@ window.onload = function() {
 	let smokeTextDiv = document.querySelector("#smoky-wrapper");
 	let body = document.querySelector("body");
 
-	window.localStorage.clear();
-
 	const init = () => {
 		const handleSmokeanimation = () => {
 			body.style.overflow = "auto";
@@ -48,7 +46,6 @@ window.onload = function() {
 		body.style.overflow = "auto";
 		document.querySelector("#app").removeChild(smokeTextDiv);
 	}
-	window.localStorage.clear();
 };
 
 //===== render your react application =====//
