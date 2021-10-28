@@ -37,6 +37,15 @@
   font-size: 25px;
   width: 70%;
 }
+@media screen and (max-width: 768px) {
+  #instructions {
+    font-size: 1.2rem;
+    width: 100%;
+  }
+  .spidersGameName, .gameName {
+    font-size: 2rem;
+  }
+}
 .modal-wrapper {
   color: #664984;
   position: absolute;
@@ -133,7 +142,7 @@ svg {
   left: 0;
   bottom: 0;
   width: 100%;
-  height: 5%;
+  height: fit-content;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -281,7 +290,6 @@ div button.power-active {
 }
 @media screen and (max-width: 767px) {
   .spiderAppFooter {
-    height: 12%;
     flex-direction: column;
   }
   div.lifes-container,

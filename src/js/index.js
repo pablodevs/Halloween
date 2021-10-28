@@ -16,20 +16,39 @@ import Home from "./component/home.jsx";
 
 //===== Hacer desaparecer el WELCOME y aparece la página =====//
 window.onload = function() {
-	const handleSmokeanimation = () => {
-		body.style.overflow = "auto";
-		document.querySelector("#app").removeChild(smokeTextDiv);
+	let smokeTextDiv = document.querySelector("#smoky-wrapper");
+	let body = document.querySelector("body");
+
+	window.localStorage.clear();
+
+	const init = () => {
+		const handleSmokeanimation = () => {
+			body.style.overflow = "auto";
+			document.querySelector("#app").removeChild(smokeTextDiv);
+		};
+
+		body.style.overflow = "hidden";
+		smokeTextDiv.style.animation = "fadeOut 4s 5s";
+
+		let lastSpan = smokeTextDiv.lastChild;
+		lastSpan.addEventListener("webkitAnimationEnd", handleSmokeanimation);
+		lastSpan.addEventListener("animationend", handleSmokeanimation);
 	};
 
-	let body = document.querySelector("body");
-	body.style.overflow = "hidden";
+	let localstrg = localStorage.getItem("firstTime");
+	if (!localstrg) {
+		localstrg = true;
+		smokeTextDiv.style.visibility = "visible";
+	}
 
-	let smokeTextDiv = document.querySelector("#smoky-wrapper");
-	smokeTextDiv.style.animation = "fadeOut 4s 5s";
-
-	let lastSpan = smokeTextDiv.lastChild;
-	lastSpan.addEventListener("webkitAnimationEnd", handleSmokeanimation);
-	lastSpan.addEventListener("animationend", handleSmokeanimation);
+	if (localstrg && localstrg !== "no") {
+		localStorage.setItem("firstTime", "no");
+		init();
+	} else {
+		body.style.overflow = "auto";
+		document.querySelector("#app").removeChild(smokeTextDiv);
+	}
+	window.localStorage.clear();
 };
 
 //===== render your react application =====//

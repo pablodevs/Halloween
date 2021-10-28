@@ -6,7 +6,6 @@ import { Games } from "./games/games.jsx";
 import { ScrollTop } from "./scrolltop.jsx";
 import { Input } from "./input.jsx";
 import { Newsletter } from "./newsletter.jsx";
-import ScrollReveal from "scrollreveal";
 
 const Home = () => {
 	return (
@@ -17,6 +16,7 @@ const Home = () => {
 				<Carousel />
 
 				{/* ===== Services ===== */}
+				<Input />
 				<Newsletter />
 
 				{/* ===== Games ===== */}

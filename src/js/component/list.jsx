@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import swal from "sweetalert";
 import PropTypes from "prop-types";
+import { FaCross } from "react-icons/fa";
 
 export const List = props => {
 	const [list, setList] = useState([]);
@@ -12,7 +13,6 @@ export const List = props => {
 	}, [props.name]);
 
 	const createUser = () => {
-		console.log("creating user in action...");
 		fetch(
 			`https://assets.breatheco.de/apis/fake/todos/user/${props.name}`,
 			{
@@ -24,9 +24,6 @@ export const List = props => {
 			}
 		)
 			.then(resp => {
-				console.log(resp.ok); // will be true if the response is successfull
-				console.log(resp.status); // the status code = 200 or code = 400 etc.
-				//console.log(resp.text()); // will try return the exact result as string
 				return resp.json(); // (returns promise) will try to parse the result as json as return a promise that you can .then for results
 			})
 			.then(response => {
@@ -53,10 +50,8 @@ export const List = props => {
 			  )
 					.then(resp => {
 						if (!resp.ok) {
-							console.log("he lanzado el error");
 							throw Error(console.log("error en el get"));
 						}
-						console.log("no error, we proceed");
 						return resp.json();
 					})
 					.then(jsonData => {
@@ -84,14 +79,10 @@ export const List = props => {
 			}
 		)
 			.then(resp => {
-				console.log(resp.ok); // will be true if the response is successfull
-				console.log(resp.status); // the status code = 200 or code = 400 etc.
-				//console.log(resp.text()); // will try return the exact result as string
 				return resp.json(); // (returns promise) will try to parse the result as json as return a promise that you can .then for results
 			})
 			.then(response => {
 				sucessCallBack();
-				console.log(response); //this will print on the console the exact object received from the server
 			})
 			.catch(error => {
 				//error handling
@@ -135,9 +126,6 @@ export const List = props => {
 			}
 		)
 			.then(resp => {
-				console.log(resp.ok); // will be true if the response is successfull
-				console.log(resp.status); // the status code = 200 or code = 400 etc.
-				//console.log(resp.text()); // will try return the exact result as string
 				return resp.json(); // (returns promise) will try to parse the result as json as return a promise that you can .then for results
 			})
 			.then(response => {
@@ -152,7 +140,6 @@ export const List = props => {
 
 	const markAsDone = index => {
 		//change in local
-		console.log("cambiando Done");
 		list[index].done == false
 			? setList(
 					list.splice(index, 1, {
@@ -179,13 +166,9 @@ export const List = props => {
 			}
 		)
 			.then(resp => {
-				console.log(resp.ok); // will be true if the response is successfull
-				console.log(resp.status); // the status code = 200 or code = 400 etc.
-				//console.log(resp.text()); // will try return the exact result as string
 				return resp.json(); // (returns promise) will try to parse the result as json as return a promise that you can .then for results
 			})
 			.then(response => {
-				console.log(response); //this will print on the console the exact object received from the server
 				getApi();
 			})
 			.catch(error => {
@@ -198,13 +181,13 @@ export const List = props => {
 	let newLI = list.map((item, index) => (
 		<li key={index} className="list-group-item  container ">
 			<div className="row">
-				<div className="list-col text-start ">
+				<div className="list-col col text-start ">
 					<i className="fas fa-skull"></i> {item.label}
 				</div>
 
 				{list[index].done == false ? (
 					<div
-						className="list-col done text-end text-muted"
+						className="list-col  col done text-center text-muted"
 						onClick={() => {
 							markAsDone(index);
 						}}>
@@ -212,7 +195,7 @@ export const List = props => {
 					</div>
 				) : (
 					<div
-						className="list-col done text-end text-success"
+						className="list-col col done text-center text-success"
 						onClick={() => {
 							markAsDone(index);
 						}}>
@@ -221,11 +204,11 @@ export const List = props => {
 				)}
 
 				<div
-					className="list-col trash  text-end"
+					className="list-col col trash  text-end"
 					onClick={() => {
 						deleteTask(index);
 					}}>
-					<i className="fas fa-cross"></i>
+					<FaCross />
 				</div>
 			</div>
 		</li>
@@ -241,7 +224,7 @@ export const List = props => {
 						type="text"
 						name="list"
 						id="list"
-						placeholder="Next scarry thing to Do..."
+						placeholder="Next scary thing to Do..."
 						onKeyUp={e => {
 							//that means that the key pressed is intro
 							if (e.keyCode == 13) {
@@ -260,10 +243,10 @@ export const List = props => {
 										? (addTask(newTask),
 										  (e.target.value = ""))
 										: swal(
-												"The item is already on the scarry list!"
+												"The item is already on the scrry list!"
 										  );
 								} else {
-									swal("Please write a scarry task");
+									swal("Please add a scary task");
 								}
 							}
 						}}

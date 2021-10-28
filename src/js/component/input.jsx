@@ -5,12 +5,12 @@ export const Input = () => {
 	const [userName, setUserName] = useState("");
 
 	return (
-		<div className="text-center mt-5 section">
-			<h1 className="text-warning">
+		<div className="text-center mt-5 section" id="todo">
+			<h1 className="text-warning mb-3 pt-4">
 				Add scary things to do in Halloween
 			</h1>
 			<div className="row">
-				<div className="col-5 mx-auto">
+				<div className="col-auto mx-auto">
 					<input
 						type="text"
 						placeholder="Please, insert a Monster name: "

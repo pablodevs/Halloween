@@ -7,18 +7,12 @@ export const GameInstructions = () => {
 	return (
 		<div
 			id="instructions"
-			className="spiderAppModal container d-flex-column">
+			className="spiderAppModal container-fluid d-flex-column">
 			<div className="row mb-3 d-flex justify-content-center align-items-center">
-				<div className="col-auto d-inline-flex p-2">
-					<GiHangingSpider
-						className="spidersGameName"
-						style={{ fontSize: "3rem" }}
-					/>
+				<div className="col-auto d-inline-flex p-2 d-flex justify-content-md-center justify-content-between">
+					<GiHangingSpider className="spidersGameName" />
 					<h1 className="gameName">SPIDERS</h1>
-					<GiHangingSpider
-						className="spidersGameName"
-						style={{ fontSize: "3rem" }}
-					/>
+					<GiHangingSpider className="spidersGameName" />
 				</div>
 			</div>
 			<div className="row mb-2 d-flex justify-content-center align-items-center">

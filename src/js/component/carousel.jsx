@@ -1,6 +1,4 @@
 import React from "react";
-import { Newsletter } from "./newsletter.jsx";
-import { Input } from "./input.jsx";
 import img1 from "../../img/carousel1.jpg";
 import img2 from "../../img/carousel2.jpg";
 import img3 from "../../img/carousel3.jpg";
@@ -33,26 +31,49 @@ export const Carousel = () => {
 			<div className="carousel-inner">
 				<div className="carousel-item active">
 					<img src={img1} className="d-block w-100" alt="..." />
-					<div className="carousel-content-1">
-						<h1>TÍTULO DE BIENVENIDA</h1>
+					<div className="carousel-caption">
+						<h2 className="h-carousel-1">
+							Welcome to the Halloween Land!
+						</h2>
 					</div>
 				</div>
 				<div className="carousel-item">
 					<img src={img2} className="d-block w-100" alt="..." />
-					<div className="carousel-content-2">{/* <Input /> */}</div>
+					<div className="carousel-content">
+						<h2 className="h-carousel mb-4">
+							Have a Spooky Good Time
+						</h2>
+						<h4 className="text-carousel">
+							Prepare for halloween with our{" "}
+							<a className="carousel-a" href="#todo">
+								To Do List
+							</a>{" "}
+							and don&apos;t forget to subscribe to our{" "}
+							<a className="carousel-a" href="#news">
+								Newsletter
+							</a>
+						</h4>
+					</div>
 				</div>
 				<div className="carousel-item">
 					<img src={img3} className="d-block w-100" alt="..." />
-					<div className="carousel-content-3">
-						{/* <Newsletter /> */}
+					<div className="carousel-content">
+						<h2 className="h-carousel mb-4 h-carousel">
+							Happy Haunting!
+						</h2>
+						<h4 className="text-carousel">
+							Feeling brave? Try kill all the spider in the <br />
+							<a className="carousel-a" href="#spidersGame">
+								Spiders Game
+							</a>{" "}
+							or play{" "}
+							<a className="carousel-a" href="#ticTacToe">
+								Tic Tac Toe
+							</a>{" "}
+							with a friend{" "}
+						</h4>
 					</div>
-					<div className="carousel-caption d-none d-md-block">
-						<h5>Third slide label</h5>
-						<p>
-							Some representative placeholder content for the
-							third slide.
-						</p>
-					</div>
+					<div className="carousel-caption"></div>
 				</div>
 			</div>
 			<button

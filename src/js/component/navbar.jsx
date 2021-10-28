@@ -6,13 +6,14 @@ export const Navbar = () => {
 		<nav className="navbar navbar-expand-lg" id="nav">
 			<div className="container">
 				<img
+					id="navLogo"
 					className="me-2"
 					src="skull.png"
 					alt="logo"
 					width="30"
 					height="30"
 				/>
-				The Halloween Web Land!
+				The Halloween Land!
 				<button
 					className="navbar-toggler"
 					type="button"
@@ -26,7 +27,7 @@ export const Navbar = () => {
 				<div className="collapse navbar-collapse" id="navbarNav">
 					<ul className="navbar-nav">
 						<li className="nav-item">
-							<a className="nav-link" href="#things">
+							<a className="nav-link" href="#todo">
 								Things before Die
 							</a>
 						</li>
@@ -40,7 +41,7 @@ export const Navbar = () => {
 								TicTacToe
 							</a>
 						</li>
-						<li className="nav-item">
+						<li>
 							{/* ===== AUDIO ===== */}
 							<ReactAudioPlayer
 								src="https://halloween.jmanvel.es/terror.ogg"

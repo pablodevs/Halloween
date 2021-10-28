@@ -66,10 +66,14 @@ export const Newsletter = () => {
 
 	return (
 		<div
+			id="news"
 			className="container-fluid section"
 			style={{ backgroundColor: "black" }}>
 			<div className="row">
-				<div className="col-4 mx-auto ">
+				<div className="col-auto mx-auto ">
+					<h1 className="text-danger mb-3 pt-4">
+						Subscribe to our Newsletter
+					</h1>
 					<form className="p-3 rounded">
 						<div className="form-group text-danger">
 							<label htmlFor="exampleInputPassword1">

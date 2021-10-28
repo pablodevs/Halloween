@@ -13,6 +13,7 @@
     $clr-gray: #2c2a27;
     $clr-lightgray: #ffffffb6;
     $clr-orange: #ffb400;
+    $clr-blood: #6C001C;
     
     /*========== Fonts styles ==========*/
     $body-font: 'Yeon Sung', cursive;
@@ -92,6 +93,9 @@ button.btn, button.navbar-toggler {
     padding: 0;
 }
 
+h1 {
+    font-family: 'Griffy', cursive;
+}
 /*===== SCROLL TOP BUTTON =====*/
 #scroll-top {
     position: fixed;
@@ -135,7 +139,8 @@ footer {
 
 /*===== NAV =====*/
 .navbar {
-    background-color: rgba(0, 0, 0, 0.5);  
+    background-color: rgba(0, 0, 0, 0.5);
+    border-bottom: 1px solid #c26ad047;
 }
 
 button.navbar-toggler {
@@ -146,36 +151,93 @@ button.navbar-toggler {
     border: none;
     color: inherit;
 }
+@media screen and (max-width: 992px) {
+    #navLogo {
+        margin-left: 1rem;
+    }
+    li.nav-item {
+        display: flex;
+        justify-content: center;
+        margin-inline: 20%;
+        
+        & > * {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            transition: 0.3s;
+            border-radius: 5px;
+        }
+        & > *:hover {
+            background: #8b3b6d73;
+            color: #dcbbff;
+        }
+    }
+}
 
 /*===== CAROUSEL =====*/
 .carousel {
     margin: 4rem 0 2rem;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
+.carousel-content {
+    position: absolute;
+    top: 20%;
+    left: 14%;
+    width: 37%;
+    height: fit-content;
+}
+.h-carousel, .h-carousel-1 {
+    color: $clr-orange;
+    text-shadow: black 0.1em 0.1em 0.2em;
+}
+@media screen and (max-width: 767px) {
+    .text-carousel {
+        font-size: 1rem;
+    }
+}
+@media screen and (max-width: 500px) {
+    .carousel-content {
+        top: 15%;
+        left: 15%;
+        width: 100%;
+        height: fit-content;
+    }
+    .h-carousel {
+        font-size: 1rem;
+    }
+    .text-carousel {
+        font-size: 0.6rem;
+        width: 40%;
+    }
+}
 
-.carousel-content-1 {
-    border: 1px solid white;
-    position: absolute;
-    bottom: 10%;
-    left: calc((100% - 400px)/2);
-    width: 400px;
+.carousel-a {
+    color: #d54d70;
+    position: relative;
+    &:hover {
+        color: #ff7b9d;
+    }
 }
-.carousel-content-2 {
-    border: 1px solid white;
-    position: absolute;
-    top: 4%;
-    left: 10%;
-    width: 45%;
-    height: 350px;
+.carousel-a::before{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 0;
+  height: 2px;
+  background-color: #ff7b9d;
+  transition: width 0.6s cubic-bezier(0.25, 1, 0.5, 1);
 }
-.carousel-content-3 {
-    border: 1px solid white;
-    position: absolute;
-    top: 4%;
-    left: 10%;
-    width: 45%;
-    height: 250px;
+
+@media (hover: hover) and (pointer: fine) {
+  .carousel-a:hover::before{
+    left: 0;
+    right: auto;
+    width: 100%;
+  }
 }
+
+
 
 /*===== ToDo LIST =====*/
 input:active, input:focus {
@@ -273,6 +335,7 @@ img.token {
     font-size: 13vw;
     font-family: 'Griffy', cursive;
     color: white;
+    visibility: hidden;
 
     z-index: 1021;
 
