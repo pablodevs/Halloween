@@ -4,13 +4,6 @@ Landing page with Halloween theme using React.
 
 ## 🎃 [#ACodingHalloween](https://www.eventbrite.com/e/a-coding-halloween-challenge-tickets-191279822097) Challenge! 💀
 
-### Similar Webpages:
-
-* https://planethorror.es/
-* https://www.horrorweb.com/
-* https://www.horrorbox.es/
-* https://jekyllthemes.io/theme/personal-website-jekyll-theme (No da miedo, pero da buenas ideas solo con verlo)
-
 ## Authors 🤡
 
 * **Pablo Álamo** - *Coding* - [peibol888](https://github.com/peibol888)
